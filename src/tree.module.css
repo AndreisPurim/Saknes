@@ -2,6 +2,8 @@
     position: absolute;
     display: flex;
     padding: 10px;
+
+    box-sizing: border-box;
   }
   
   .inner {
@@ -10,10 +12,48 @@
     align-items: center;
     justify-content: center;
     border: 2px solid rgba(0, 0, 0, .2);
-    border-radius: 10px 0;
+    border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
   }
+
+
+.tree {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.reset {
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  padding: 4px 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  line-height: 1;
+  cursor: pointer;
+}
+.point {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform: translate(0, 0) scale(1);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.canvas {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.details {
+  position: absolute;
+  left: 10px;
+  top: 60px;
+}
   
   .male {
     background: #a4ecff;
