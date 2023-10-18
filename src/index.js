@@ -1,105 +1,66 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { create } from 'pinch-zoom-pan';
-import css from './tree.module.css';
-import ReactFamilyTree from 'react-family-tree';
-import './index.css'
+import {HashRouter, Route, Routes} from 'react-router-dom';
 
-import classNames from 'classnames';
+import Alert from "@mui/material/Alert";
+import Container from "@mui/material/Container";
+import {ThemeProvider, createTheme} from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import CssBaseline from "@mui/material/CssBaseline";
+import Snackbar from "@mui/material/Snackbar";
 
-export const PinchZoomPan = React.memo(
-  function PinchZoomPan({ min, max, captureWheel, className, style, children }) {
-    const root = React.useRef(null);
-    React.useEffect(() => {
-      const element = root.current;
-      if (!element) return;
-      return create({ element, minZoom: min, maxZoom: max, captureWheel });
-    }, [min, max, captureWheel]);
-    return (
-      <div ref={root} className={classNames(className, css.root)} style={style}>
-        <div className={css.point}>
-          <div className={css.canvas}>
-            {children}
-          </div>
-        </div>
-      </div>
-    );
-  },
-);
-  
-function FamilyNode({ node, isRoot, isHover, onClick, onSubClick, style }){
-    const clickHandler = React.useCallback(() => onClick(node.id), [node.id, onClick]);
-    const clickSubHandler = React.useCallback(() => onSubClick(node.id), [node.id, onSubClick]);
-    return (
-      <div className={css.root} style={style}>
-        <div
-          className={classNames(
-            css.inner,
-            css[node.gender],
-            isRoot && css.isRoot,
-            isHover && css.isHover,
-          )}
-          onClick={clickHandler}
-        >
-          <div className={css.id}>{node.id}</div>
-          {node.hasSubTree && (
-            <div
-              className={classNames(css.sub, css[node.gender])}
-              onClick={clickSubHandler}
-            />
-          )}
-        </div>
-      </div>
-    );
-}
+import FamilyTree from './Modules/Families/Families'
+import Homepage from './Modules/Homepage/Homepage'
 
-export const NODE_WIDTH = 70;
-export const NODE_HEIGHT = 80;
+const information = require('./Data/information.json') 
 
-function getNodeStyle({ left, top }) {
-  return {
-    width: NODE_WIDTH,
-    height: NODE_HEIGHT,
-    transform: `translate(${left * (NODE_WIDTH / 2)}px, ${top * (NODE_HEIGHT / 2)}px)`,
-  };
-}
+// #E4E4DE, sophisticated sage #C4C5BA, timeless noir #1B1B1B, muted moss #595f39
 
-function App() {
-  const nodes = require('./family.json')
-  const firstNodeId = React.useMemo(() => nodes[0].id, [nodes]);
-  const [rootId, setRootId] = React.useState(firstNodeId);
+const getComplementaryColor = (color = "") => {
+  const colorPart = color.slice(1);
+  const ind = parseInt(colorPart, 16);
+  let iter = ((1 << (4 * colorPart.length)) - 1 - ind).toString(16);
+  while (iter.length < colorPart.length) {
+      iter = "0" + iter;
+  }
+  return "#" + iter;
+};
 
-  const [selectId, setSelectId] = React.useState("");
-  const [hoverId, setHoverId] = React.useState("");
-  return (
-    <div className={css.root}>
-      {nodes.length > 0 && (
-        <PinchZoomPan min={0.5} max={2.5} captureWheel className={css.wrapper}>
-          <ReactFamilyTree
-            nodes={nodes}
-            rootId={rootId}
-            width={NODE_WIDTH}
-            height={NODE_HEIGHT}
-            className={css.tree}
-            renderNode={node => (
-              <FamilyNode
-                key={node.id}
-                node={node}
-                isRoot={node.id === rootId}
-                isHover={node.id === hoverId}
-                onClick={setSelectId}
-                onSubClick={setRootId}
-                style={getNodeStyle(node)}
-              />
-            )}
-          />
-        </PinchZoomPan>
-      )}
-    </div>
+const color = "#595f39";
+
+function App(){
+  const [lightMode, setLightMode] = React.useState(
+    (useMediaQuery("(prefers-color-scheme: dark)") ? "dark" : "light")
   );
+  const theme = React.useMemo(
+    () =>
+        createTheme({
+            palette: {
+                primary: {main: color},
+                secondary: {main: getComplementaryColor(color)},
+                mode: lightMode,
+            },
+            typography: {
+                fontFamily: "sans-serif",
+            },
+        }),
+    [color, lightMode]
+  );
+  return(
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <HashRouter>
+          <Routes>
+              {information.families.map(family_id => 
+                <Route key={family_id} path={"/family/"+family_id} element={<FamilyTree family_id={family_id}/>} />
+              )}
+              <Route path="/" element={<Homepage />}/>
+          </Routes>
+      </HashRouter>
+    </ThemeProvider>
+  )
 }
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-
 
