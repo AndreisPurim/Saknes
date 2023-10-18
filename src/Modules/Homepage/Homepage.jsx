@@ -8,15 +8,27 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
-
-import Avatar from '@mui/material/Avatar';
-
 import Paper from '@mui/material/Paper';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
+import IconButton from '@mui/material/IconButton';
 
-import Link from '@mui/material/Link';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import EmailIcon from '@mui/icons-material/Email';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import HomeIcon from '@mui/icons-material/Home';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+const social_medial = [
+    {icon: <InstagramIcon fontSize="large"/>, link: "https://www.instagram.com/andreis.purim/"},
+    {icon: <FacebookIcon fontSize="large"/>, link: "https://www.facebook.com/andreis.purim"},
+    {icon: <EmailIcon fontSize="large"/>, link: "mailto:andreispurim@gmail.com"},
+    {icon: <WhatsAppIcon fontSize="large"/>, link: "https://api.whatsapp.com/send?phone=5541992903550&text=%5BEnter%20your%20name%20and%20your%20reason%20for%20contacting%5D"},
+    {icon: <LinkedInIcon fontSize="large"/>, link: "https://www.linkedin.com/in/andreispurim/"},
+    {icon: <HomeIcon fontSize="large"/>, link: "https://andreis.lv"},
+    {icon: <GitHubIcon fontSize="large"/>, link: "https://github.com/AndreisPurim"}
+]
+
 
 const video = require('./background_light.mp4')
 const links = ["families", "biographies", "maps", "events", "documents", "search"]
@@ -47,7 +59,7 @@ export default function Homepage(){
                 <Grid item xs={12}/>
                 {links.map(link =>
                     <Grid item key={link}>
-                        <Button variant="outlined" size="large">
+                        <Button variant="outlined" size="large" disabled>
                             {link}
                         </Button>
                     </Grid>
@@ -86,13 +98,33 @@ export default function Homepage(){
                         <Grid item xs={12}/>
                     </React.Fragment>
                 )}
+                <Grid item xs={12}/>
                 <Grid item xs={11}>
-                    <Paper elevation={12} style={{textIndent: '2rem', textAlign: 'justify', padding:'1rem'}}>
-                        <img style={{maxWidth: '10rem', float: "left", paddingRight:'1rem', borderRadius:'40px'}} alt="Andreis" src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/273646216_1933802966806673_675703403140099491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEpJ1EEjk43S8Oh95Q3nzLAuPOeHt2K3Y64854e3YrdjiDJqBKxK4UDbgsCLkRMATgBe0Ru_ZMIl16QuylxYPOt&_nc_ohc=XB3zV2JEABoAX9NWppz&_nc_oc=AQmDFPk7KQ7Q8D8NMNGK7btUncHbcavewvZe95q5qBqYpTofi6so4znn-FCLKRZBNKk&_nc_ht=scontent.fcpq4-1.fna&oh=00_AfBCIgMEXAvoqUl-oX85O60XoO6tXNZq121eOCJvoz7MdA&oe=65357DA8" />
-                        <Typography variant="h5" style={{color:"#595f39"}}><b>About the Author</b></Typography>
-                        <Typography variant="body2">I'm Andreis Purim/Andrejs Purinš - and as you can probably guess - I'm latvian-brazilian Computer Engineer, my main focus is A.I. and Cybersecurity. Since 2014 I've been <s>overworking myself to an early grave</s> volunteering in the Brazilian Latvian Culture Assocation, the Honorary Consulate of Latvia in Brazil, PBLA and other organizations preserve latvianness across the world.</Typography>
-                        <Typography variant="body2">Saknes is a long dream of mine because I've spent my teenage years working togheter with my uncle Vigants Arvids Puriņš - our equivalent of a Latvian-Brazilian <i>Krišjānis Barons</i>, who drove around miles and miles of Brazil collecting documents, testimonials and information about the Latvians in Brazil. Some of his work is now part of the Latvian National Archive. However, even what we achieved is still a fraction of the total microcosms of the Latvians here - even worse, even with his tireless work, it is still hard to research these documents.</Typography>
-                        <Typography variant="body2">That's where Saknes comes in: a way to preverse - as long as possible - all this information that he and all others managed to collect. I hope all these stories captivate you as they once captivated me.</Typography>
+                    <Paper elevation={12}>
+                        <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2} style={{padding:'0 1rem 0.5rem 1rem'}}>
+                            <Grid item xs={12} style={{textAlign: 'center'}}>
+                                <Typography variant="h5" style={{color:"#595f39"}}><b>About the Author</b></Typography>
+                                <Divider/>
+                            </Grid>
+                            <Grid item md={2} xs={6}>
+                                <img style={{width: '100%', borderRadius:'20px'}} alt="Andreis" src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/273646216_1933802966806673_675703403140099491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEpJ1EEjk43S8Oh95Q3nzLAuPOeHt2K3Y64854e3YrdjiDJqBKxK4UDbgsCLkRMATgBe0Ru_ZMIl16QuylxYPOt&_nc_ohc=XB3zV2JEABoAX9NWppz&_nc_oc=AQmDFPk7KQ7Q8D8NMNGK7btUncHbcavewvZe95q5qBqYpTofi6so4znn-FCLKRZBNKk&_nc_ht=scontent.fcpq4-1.fna&oh=00_AfBCIgMEXAvoqUl-oX85O60XoO6tXNZq121eOCJvoz7MdA&oe=65357DA8" />
+                            </Grid>
+                            <Grid item md={10} xs={12} style={{textIndent: '2rem', textAlign: 'justify'}}>
+                                <Typography variant="body2">I'm Andreis Purim/Andrejs Purinš - and as you can probably guess - I'm a latvian-brazilian Computer Engineer (my main focus is A.I. and Cybersecurity). Since 2014 I've been <s>overworking myself to an early grave</s> volunteering in the Brazilian Latvian Culture Assocation, the Honorary Consulate of Latvia in Brazil, PBLA and other organizations preserve latvianness across the world.</Typography>
+                                <Typography variant="body2">Saknes is a long dream of mine because I've spent my teenage years working togheter with my uncle Vigants Arvids Puriņš - our equivalent of a Latvian-Brazilian <i>Krišjānis Barons</i>, who drove around miles and miles of Brazil collecting documents, testimonials and information about the Latvians in Brazil. Some of his work is now part of the Latvian National Archive. However, even what we achieved is still a fraction of the total microcosms of the Latvians here - even worse, even with his tireless work, it is still hard to research these documents.</Typography>
+                                <Typography variant="body2">That's where Saknes comes in: a way to preverse - as long as possible - all this information that he and all others managed to collect. I hope all these stories captivate you as they once captivated me.</Typography>
+                            </Grid>
+                            <Grid item xs={12} style={{textAlign: 'center'}}>
+                                <Divider/>
+                            </Grid>
+                            {social_medial.map(item =>
+                                <Grid item>
+                                    <IconButton target="_blank" href={item.link}>
+                                        {item.icon}
+                                    </IconButton>
+                                </Grid>
+                                )}
+                        </Grid>
                     </Paper>
                 </Grid>
                 <Grid item xs={12}/>
@@ -103,7 +135,7 @@ export default function Homepage(){
                     </Typography>
                     <Typography variant="caption">no one yet :(</Typography>
                 </Grid>
-                <Grid container direction="row" justifyContent="center" sx={{ pt: '3rem' }}>
+                <Grid container direction="row" justifyContent="center" >
                     <Divider style={{ width: '100%', marginTop: '0.5rem' }} />
                     <Grid item color="text.secondary">
                         <Typography variant="caption">
