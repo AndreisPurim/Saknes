@@ -70,9 +70,9 @@ export default function Tree({ family_id }) {
   const [selectId, setSelectId] = React.useState("");
   const [hoverId, setHoverId] = React.useState("");
   return (
-    <div className={css.root}>
+    <div>
       {nodes.length > 0 && (
-        <PinchZoomPan min={0.5} max={2.5} captureWheel className={css.wrapper}>
+        // <PinchZoomPan min={0.5} max={2.5} captureWheel className={css.wrapper}>
           <ReactFamilyTree
             nodes={nodes}
             rootId={rootId}
@@ -91,7 +91,7 @@ export default function Tree({ family_id }) {
               />
             )}
           />
-        </PinchZoomPan>
+        // </PinchZoomPan>
       )}
     </div>
   );

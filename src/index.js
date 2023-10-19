@@ -12,7 +12,7 @@ import Snackbar from "@mui/material/Snackbar";
 import FamilyTree from './Modules/Families/Families'
 import Homepage from './Modules/Homepage/Homepage'
 import Submission from './Modules/Submission/Submission'
-
+import Maps from './Modules/Maps/Maps'
 
 import Navbar from './Modules/Components/Navbar'
 import Footer from './Modules/Components/Footer'
@@ -44,8 +44,10 @@ function App(){
 				<Navbar {...sendControl}/>
 				<Routes>
 					{information.families.map(family_id => 
-						<Route key={family_id} path={"/family/"+family_id} element={<FamilyTree family_id={family_id}/>} />
+						<Route key={family_id} path={"/families/"+family_id} element={<FamilyTree family_id={family_id}/>} />
 					)}
+					<Route path={"/families"} element={<FamilyTree family_id={'klavin'}/>} />
+					<Route path="/maps" element={<Maps {...sendControl} />}/>
 					<Route path="/submission" element={<Submission {...sendControl} />}/>
 					<Route path="/" element={<Homepage />}/>
 				</Routes>

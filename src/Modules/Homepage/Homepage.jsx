@@ -59,10 +59,10 @@ export default function Homepage(){
             <CardMedia component="video" src={video} autoPlay loop/>
             <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
                 <Grid item xs={12}/>
-                {links.map(link =>
-                    <Grid item key={link}>
-                        <Button variant="outlined" size="large" disabled>
-                            {link}
+                {links.map(l =>
+                    <Grid item key={l}>
+                        <Button variant="outlined" size="large" component={Link} to={l}>
+                            {l}
                         </Button>
                     </Grid>
                 )}
