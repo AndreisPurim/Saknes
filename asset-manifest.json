@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Saknes/static/css/main.e1f05c69.css",
-    "main.js": "/Saknes/static/js/main.311d9e54.js",
+    "main.css": "/Saknes/static/css/main.b3fb710d.css",
+    "main.js": "/Saknes/static/js/main.aad3fc60.js",
     "static/media/background_light.mp4": "/Saknes/static/media/background_light.67ddc5dab17d9b0c744a.mp4",
     "index.html": "/Saknes/index.html",
-    "main.e1f05c69.css.map": "/Saknes/static/css/main.e1f05c69.css.map",
-    "main.311d9e54.js.map": "/Saknes/static/js/main.311d9e54.js.map"
+    "main.b3fb710d.css.map": "/Saknes/static/css/main.b3fb710d.css.map",
+    "main.aad3fc60.js.map": "/Saknes/static/js/main.aad3fc60.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1f05c69.css",
-    "static/js/main.311d9e54.js"
+    "static/css/main.b3fb710d.css",
+    "static/js/main.aad3fc60.js"
   ]
 }
