@@ -1,18 +1,14 @@
 {
   "files": {
-    "main.css": "/ZINA/static/css/main.f5368f54.chunk.css",
-    "main.js": "/ZINA/static/js/main.94ad4d63.chunk.js",
-    "main.js.map": "/ZINA/static/js/main.94ad4d63.chunk.js.map",
-    "runtime~main.js": "/ZINA/static/js/runtime~main.62fad1d6.js",
-    "runtime~main.js.map": "/ZINA/static/js/runtime~main.62fad1d6.js.map",
-    "static/css/2.430af4cd.chunk.css": "/ZINA/static/css/2.430af4cd.chunk.css",
-    "static/js/2.125af739.chunk.js": "/ZINA/static/js/2.125af739.chunk.js",
-    "static/js/2.125af739.chunk.js.map": "/ZINA/static/js/2.125af739.chunk.js.map",
-    "index.html": "/ZINA/index.html",
-    "precache-manifest.a3fce84de3864ffd573b1db98130f9d1.js": "/ZINA/precache-manifest.a3fce84de3864ffd573b1db98130f9d1.js",
-    "service-worker.js": "/ZINA/service-worker.js",
-    "static/css/2.430af4cd.chunk.css.map": "/ZINA/static/css/2.430af4cd.chunk.css.map",
-    "static/css/main.f5368f54.chunk.css.map": "/ZINA/static/css/main.f5368f54.chunk.css.map",
-    "static/media/venue_location_icon.svg": "/ZINA/static/media/venue_location_icon.2ceaf661.svg"
-  }
+    "main.css": "/saknes/static/css/main.e1f05c69.css",
+    "main.js": "/saknes/static/js/main.af20da4f.js",
+    "static/media/background_light.mp4": "/saknes/static/media/background_light.67ddc5dab17d9b0c744a.mp4",
+    "index.html": "/saknes/index.html",
+    "main.e1f05c69.css.map": "/saknes/static/css/main.e1f05c69.css.map",
+    "main.af20da4f.js.map": "/saknes/static/js/main.af20da4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1f05c69.css",
+    "static/js/main.af20da4f.js"
+  ]
 }
