@@ -2,7 +2,6 @@ import React from 'react';
 
 import Container from "@mui/material/Container";
 
-import Navbar from './Navbar'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -18,6 +17,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
+
+
+import { Link } from 'react-router-dom'
+
 
 const social_medial = [
     {icon: <InstagramIcon fontSize="large"/>, link: "https://www.instagram.com/andreis.purim/"},
@@ -53,7 +56,6 @@ const random_quote = information.quotes[Math.floor(Math.random() * information.q
 export default function Homepage(){
     return(
         <Container maxWidth="lg">
-            <Navbar />
             <CardMedia component="video" src={video} autoPlay loop/>
             <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
                 <Grid item xs={12}/>
@@ -66,7 +68,7 @@ export default function Homepage(){
                 )}
                 <Grid item xs={12}/>
                 <Grid item>
-                    <Button variant="contained" size="large">
+                    <Button variant="contained" size="large" component={Link} to={'/submission'}>
                         Submit information
                     </Button>
                 </Grid>
@@ -134,14 +136,6 @@ export default function Homepage(){
                         If you have any information about any Latvian-Brazilian (any date, person, place, etc...), you can help by submitting this data to the database. You can also help by sharing this project with friends, family or other people or helping in technical aspects (submitting bugs, etc...).
                     </Typography>
                     <Typography variant="caption">no one yet :(</Typography>
-                </Grid>
-                <Grid container direction="row" justifyContent="center" >
-                    <Divider style={{ width: '100%', marginTop: '0.5rem' }} />
-                    <Grid item color="text.secondary">
-                        <Typography variant="caption">
-                            Dedicated to my family and to the Latvians in Brazil
-                        </Typography>
-                    </Grid>
                 </Grid>
             </Grid>
         </Container>
