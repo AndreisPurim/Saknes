@@ -24,7 +24,7 @@ const information = require('./Data/information.json')
 
 
 function App(){
-	const [lightMode, setLightMode] = React.useState(useMediaQuery("(prefers-color-scheme: dark)") ? "dark" : "light");
+	const [lightMode, setLightMode] = React.useState("light");
 	const [alert, setAlert] = React.useState({open: false, text: "", severity: "success", hide: true});
 	const theme = React.useMemo(() => createTheme({
 		palette: {

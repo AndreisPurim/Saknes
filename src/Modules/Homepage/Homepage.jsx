@@ -69,7 +69,7 @@ export default function Homepage(){
                 <Grid item xs={12}/>
                 <Grid item>
                     <Button variant="contained" size="large" component={Link} to={'/submission'}>
-                        Submit information
+                        Talk to our AI
                     </Button>
                 </Grid>
                 <Grid item xs={12}/>
@@ -109,7 +109,7 @@ export default function Homepage(){
                                 <Divider/>
                             </Grid>
                             <Grid item md={2} xs={6}>
-                                <img style={{width: '100%', borderRadius:'20px'}} alt="Andreis" src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/273646216_1933802966806673_675703403140099491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEpJ1EEjk43S8Oh95Q3nzLAuPOeHt2K3Y64854e3YrdjiDJqBKxK4UDbgsCLkRMATgBe0Ru_ZMIl16QuylxYPOt&_nc_ohc=XB3zV2JEABoAX9NWppz&_nc_oc=AQmDFPk7KQ7Q8D8NMNGK7btUncHbcavewvZe95q5qBqYpTofi6so4znn-FCLKRZBNKk&_nc_ht=scontent.fcpq4-1.fna&oh=00_AfBCIgMEXAvoqUl-oX85O60XoO6tXNZq121eOCJvoz7MdA&oe=65357DA8" />
+                                <img style={{width: '100%', borderRadius:'20px'}} alt="Andreis" src="https://andreis.lv/images/andreis.jpg" />
                             </Grid>
                             <Grid item md={10} xs={12} style={{textIndent: '2rem', textAlign: 'justify'}}>
                                 <Typography variant="body2">I'm Andreis Purim/Andrejs Purinš - and as you can probably guess - I'm a latvian-brazilian Computer Engineer (my main focus is A.I. and Cybersecurity). Since 2014 I've been <s>overworking myself to an early grave</s> volunteering in the Brazilian Latvian Culture Assocation, the Honorary Consulate of Latvia in Brazil, PBLA and other organizations preserve latvianness across the world.</Typography>

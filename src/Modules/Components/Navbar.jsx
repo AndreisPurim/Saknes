@@ -110,6 +110,9 @@ export default function Navbar({lightMode, setLightMode, alert, setAlert}) {
                     <Divider style={{ width: '100%', marginTop: '0.5rem' }} />
                 </Grid>
             </Toolbar>
+            <Typography  component="h2" variant="overline" color="inherit" align="center">
+                [EM CONSTRUÇÃO]
+            </Typography>
         </Container>
     )
 }
