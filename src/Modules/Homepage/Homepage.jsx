@@ -2,7 +2,6 @@ import React from 'react';
 
 import Container from "@mui/material/Container";
 
-import Navbar from './Navbar'
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -18,6 +17,10 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import HomeIcon from '@mui/icons-material/Home';
 import GitHubIcon from '@mui/icons-material/GitHub';
+
+
+import { Link } from 'react-router-dom'
+
 
 const social_medial = [
     {icon: <InstagramIcon fontSize="large"/>, link: "https://www.instagram.com/andreis.purim/"},
@@ -53,21 +56,20 @@ const random_quote = information.quotes[Math.floor(Math.random() * information.q
 export default function Homepage(){
     return(
         <Container maxWidth="lg">
-            <Navbar />
             <CardMedia component="video" src={video} autoPlay loop/>
             <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
                 <Grid item xs={12}/>
-                {links.map(link =>
-                    <Grid item key={link}>
-                        <Button variant="outlined" size="large" disabled>
-                            {link}
+                {links.map(l =>
+                    <Grid item key={l}>
+                        <Button variant="outlined" size="large" component={Link} to={l}>
+                            {l}
                         </Button>
                     </Grid>
                 )}
                 <Grid item xs={12}/>
                 <Grid item>
-                    <Button variant="contained" size="large">
-                        Submit information
+                    <Button variant="contained" size="large" component={Link} to={'/submission'}>
+                        Talk to our AI
                     </Button>
                 </Grid>
                 <Grid item xs={12}/>
@@ -107,7 +109,7 @@ export default function Homepage(){
                                 <Divider/>
                             </Grid>
                             <Grid item md={2} xs={6}>
-                                <img style={{width: '100%', borderRadius:'20px'}} alt="Andreis" src="https://scontent.fcpq4-1.fna.fbcdn.net/v/t39.30808-6/273646216_1933802966806673_675703403140099491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEpJ1EEjk43S8Oh95Q3nzLAuPOeHt2K3Y64854e3YrdjiDJqBKxK4UDbgsCLkRMATgBe0Ru_ZMIl16QuylxYPOt&_nc_ohc=XB3zV2JEABoAX9NWppz&_nc_oc=AQmDFPk7KQ7Q8D8NMNGK7btUncHbcavewvZe95q5qBqYpTofi6so4znn-FCLKRZBNKk&_nc_ht=scontent.fcpq4-1.fna&oh=00_AfBCIgMEXAvoqUl-oX85O60XoO6tXNZq121eOCJvoz7MdA&oe=65357DA8" />
+                                <img style={{width: '100%', borderRadius:'20px'}} alt="Andreis" src="https://andreis.lv/images/andreis.jpg" />
                             </Grid>
                             <Grid item md={10} xs={12} style={{textIndent: '2rem', textAlign: 'justify'}}>
                                 <Typography variant="body2">I'm Andreis Purim/Andrejs Purinš - and as you can probably guess - I'm a latvian-brazilian Computer Engineer (my main focus is A.I. and Cybersecurity). Since 2014 I've been <s>overworking myself to an early grave</s> volunteering in the Brazilian Latvian Culture Assocation, the Honorary Consulate of Latvia in Brazil, PBLA and other organizations preserve latvianness across the world.</Typography>
@@ -134,14 +136,6 @@ export default function Homepage(){
                         If you have any information about any Latvian-Brazilian (any date, person, place, etc...), you can help by submitting this data to the database. You can also help by sharing this project with friends, family or other people or helping in technical aspects (submitting bugs, etc...).
                     </Typography>
                     <Typography variant="caption">no one yet :(</Typography>
-                </Grid>
-                <Grid container direction="row" justifyContent="center" >
-                    <Divider style={{ width: '100%', marginTop: '0.5rem' }} />
-                    <Grid item color="text.secondary">
-                        <Typography variant="caption">
-                            Dedicated to my family and to the Latvians in Brazil
-                        </Typography>
-                    </Grid>
                 </Grid>
             </Grid>
         </Container>
