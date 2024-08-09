@@ -1,0 +1,43 @@
+https://rionovo.wordpress.com/2010/10/29/sobre-a-manteiga-dos-sabatistas_/
+Sobre a &#8220;manteiga dos sabatistas&#8221;
+--------------
+<div class="entry-content">
+		<p>Mencionada <a href="https://rionovo.wordpress.com/1918/04/11/como-o-teu-fraque-amarelo-olga-purim-a-reynaldo-purim/">aqui</a>: trata-se da <em>manteiga de amendoim</em>. Os <a href="http://pt.wikipedia.org/wiki/Adventistas">adventistas</a> sempre foram os pioneiros em usar a alimentação mais natural possível, evitando o consumo de derivados de animais.</p>
+<p>O nosso sistema usando o amendoim era assim: primeiro ele era torrado no forno de onde era tirado o pão de milho, que geralmente era feito aos sábados. O calor residual era suficiente para torrar o amendoim e assar as batatas doces. No dia seguinte o amendoim era limpo e moído duas ou três vezes na máquina manual de moer carne, somente mudando para um crivo mais fino. Em seguida era preparado numa frigideira ou caçarola com açúcar, leite e água  até chegar no ponto.</p>
+<p>Muito delicioso, podes crer.</p>
+<p align="right">V. A. Purim</p>
+<div id="atatags-370373-667740a950c5c">
+		<script type="text/javascript">
+			__ATA.cmd.push(function() {
+				__ATA.initVideoSlot('atatags-370373-667740a950c5c', {
+					sectionId: '370373',
+					format: 'inread'
+				});
+			});
+		</script>
+	</div><span id="wordads-inline-marker" style="display: none;"></span>			<div id="atatags-26942-667740a950c8d"></div>
+			
+			<script>
+				__ATA.cmd.push(function() {
+					__ATA.initDynamicSlot({
+						id: 'atatags-26942-667740a950c8d',
+						location: 120,
+						formFactor: '001',
+						label: {
+							text: 'Anúncios',
+						},
+						creative: {
+							reportAd: {
+								text: 'Report this ad',
+							},
+							privacySettings: {
+								text: 'Privacidade',
+								
+							}
+						}
+					});
+				});
+			</script><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Partilhar isto:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-887" class="share-facebook sd-button share-icon" href="https://rionovo.wordpress.com/2010/10/29/sobre-a-manteiga-dos-sabatistas_/?share=facebook" target="_blank" title="Clique para partilhar no Facebook" ><span>Facebook</span></a></li><li class="share-x"><a rel="nofollow noopener noreferrer" data-shared="sharing-x-887" class="share-x sd-button share-icon" href="https://rionovo.wordpress.com/2010/10/29/sobre-a-manteiga-dos-sabatistas_/?share=x" target="_blank" title="Click to share on X" ><span>X</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-8911806-887-667740a9510a7' data-src='//widgets.wp.com/likes/index.html?ver=20240622#blog_id=8911806&amp;post_id=887&amp;origin=rionovo.wordpress.com&amp;obj_id=8911806-887-667740a9510a7' data-name='like-post-frame-8911806-887-667740a9510a7' data-title='Like or Reblog'><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Gosto</span></span> <span class='loading'>Carregando...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+</div></div>			</div>
